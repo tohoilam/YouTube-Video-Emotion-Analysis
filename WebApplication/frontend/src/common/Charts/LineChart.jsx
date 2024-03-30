@@ -1,110 +1,54 @@
+import { useTheme } from '@mui/material';
+import { tokens } from '../../theme';
 import { Box } from '@mui/material';
 import { ResponsiveLine } from '@nivo/line'
 import Header from '../Header';
 import ChartsTheme from './ChartsTheme';
 
-const mockData = [
+const data = [
   {
-    "id": "Anger",
+    "id": "Emotion Amplitude",
     "color": "hsl(111, 70%, 50%)",
     "data": [
       {
-        "x": "section 1",
-        "y": 51
+        "x": "1",
+        "y": 113
       },
       {
-        "x": "section 2",
-        "y": 112
+        "x": "2",
+        "y": 71
       },
       {
-        "x": "section 3",
-        "y": 95
+        "x": "3",
+        "y": 38
       },
       {
-        "x": "section 4",
-        "y": 245
+        "x": "4",
+        "y": 29
       },
       {
-        "x": "section 5",
-        "y": 279
-      },
-    ]
-  },
-  {
-    "id": "Calmness",
-    "color": "hsl(34, 70%, 50%)",
-    "data": [
-      {
-        "x": "section 1",
-        "y": 277
+        "x": "5",
+        "y": 173
       },
       {
-        "x": "section 2",
-        "y": 119
+        "x": "6",
+        "y": 132
       },
       {
-        "x": "section 3",
-        "y": 280
+        "x": "7",
+        "y": 29
       },
       {
-        "x": "section 4",
-        "y": 96
+        "x": "8",
+        "y": 30
       },
       {
-        "x": "section 5",
-        "y": 120
-      },
-    ]
-  },
-  {
-    "id": "Happiness",
-    "color": "hsl(135, 70%, 50%)",
-    "data": [
-      {
-        "x": "section 1",
-        "y": 92
+        "x": "9",
+        "y": 25
       },
       {
-        "x": "section 2",
-        "y": 143
-      },
-      {
-        "x": "section 3",
-        "y": 33
-      },
-      {
-        "x": "section 4",
-        "y": 119
-      },
-      {
-        "x": "section 5",
-        "y": 157
-      },
-    ]
-  },
-  {
-    "id": "Sadness",
-    "color": "hsl(337, 70%, 50%)",
-    "data": [
-      {
-        "x": "section 1",
-        "y": 225
-      },
-      {
-        "x": "section 2",
-        "y": 292
-      },
-      {
-        "x": "section 3",
-        "y": 68
-      },
-      {
-        "x": "section 4",
-        "y": 122
-      },
-      {
-        "x": "section 5",
-        "y": 5
+        "x": "10",
+        "y": 41
       },
     ]
   },
@@ -141,16 +85,17 @@ const mockData = [
 // no chart will be rendered.
 // website examples showcase many properties,
 // you'll often use just a few of them.
-const LineChart = ({ data }) => {
-  const [chartsTheme, chartsEmotionColors] = ChartsTheme()
+const LineChart = () => {
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
 
-  const Line = () => {
-    return (
-      <ResponsiveLine
-        data={mockData}
-        colors={chartsEmotionColors}
+  const [chartsTheme, chartsEmotionColors] = ChartsTheme();
+
+  return (
+    <ResponsiveLine
+        data={data}
         theme={chartsTheme}
-        margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
+        margin={{ top: 15, right: 10, bottom: 10, left: 10 }}
         xScale={{ type: 'point' }}
         yScale={{
             type: 'linear',
@@ -160,31 +105,36 @@ const LineChart = ({ data }) => {
             reverse: false
         }}
         yFormat=" >-.2f"
-        curve="natural"
+        curve="cardinal"
         axisTop={null}
         axisRight={null}
         axisBottom={{
-            orient: 'bottom',
             tickSize: 5,
             tickPadding: 5,
             tickRotation: 0,
             legend: 'transportation',
             legendOffset: 36,
-            legendPosition: 'middle'
+            legendPosition: 'middle',
+            truncateTickAt: 0
         }}
         axisLeft={{
-            orient: 'left',
             tickSize: 5,
             tickPadding: 5,
             tickRotation: 0,
             legend: 'count',
             legendOffset: -40,
-            legendPosition: 'middle'
+            legendPosition: 'middle',
+            truncateTickAt: 0
         }}
+        enableGridX={false}
+        lineWidth={3}
+        enablePoints={false}
+        pointSize={10}
         pointColor={{ theme: 'background' }}
         pointBorderWidth={2}
-        pointBorderColor={{ from: 'serieColor' }}
+        pointBorderColor={{ from: 'serieColor', modifiers: [] }}
         pointLabelYOffset={-12}
+        enableTouchCrosshair={true}
         useMesh={true}
         legends={[
             {
@@ -212,18 +162,7 @@ const LineChart = ({ data }) => {
                 ]
             }
         ]}
-      />
-    )
-  }
-
-
-  return (
-    <Box m="20px">
-      <Header title="TESTING" subtitle="lololololololol"></Header>
-      <Box height="400px">
-        <Line />
-      </Box>
-    </Box>
+    />
   )
 }
 

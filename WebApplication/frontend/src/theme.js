@@ -116,10 +116,13 @@ export const tokens = (mode) => ({
       },
 
       emotion: {
-        Anger: "hsl(2, 70%, 55%)",
-        Happiness: "hsl(60, 60%, 53%)",
-        Calmness: "hsl(129, 60%, 53%)",
-        Sadness: "hsl(186, 60%, 53%)"
+        Anger: "hsl(2, 70%, 55%)", // red
+        Fear: "hsl(31, 60%, 53%)", // orange
+        Disgust: "hsl(282, 60%, 53%)", // purple
+        Sadness: "hsl(186, 60%, 53%)", // blue
+        Neutral: "hsl(31, 2%, 52%)", // grey
+        Happiness: "hsl(129, 60%, 53%)", // green
+        Surprise: "hsl(60, 60%, 53%)", // yellow
       },
       background: {
         paper: "rgb(16, 22, 26, 0.5)"

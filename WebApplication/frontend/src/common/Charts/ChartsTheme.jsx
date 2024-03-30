@@ -4,7 +4,7 @@ import { tokens } from '../../theme';
 const ChartsTheme = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
-  const chartsEmotionColors = [colors.emotion['Anger'], colors.emotion['Calmness'], colors.emotion['Happiness'], colors.emotion['Sadness']];
+  const chartsEmotionColors = [colors.emotion['Anger'], colors.emotion['Fear'], colors.emotion['Disgust'], colors.emotion['Sadness'], colors.emotion['Neutral'], colors.emotion['Happiness'], colors.emotion['Surprise']];
 
 
   const chartsTheme = {

@@ -64,30 +64,6 @@ export const HomePage = () => {
     }
   }, [tab])
 
-  // useEffect(() => {
-  //   if (expandedInfo === true) {
-  //     setTimeout(() => {
-  //       infoRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  //     }, "300");
-  //   }
-  // }, [expandedInfo]);
-
-
-  // const generateMusic = async () => {
-  //   setIsLoading(true);
-  //   let formData = new FormData();
-  //   formData.append(recordedAudio['className'], recordedAudio['blob'], recordedAudio['fileName']);
-
-  //   const response = await MGApi.getMusicGeneration(formData);
-	// 	if (response) {
-  //     const blobUrlList = response.blobUrlList;
-  //     const infoData = response.infoData;
-
-	// 		setGeneratedAudioList(blobUrlList);
-	// 	}
-
-	// 	setIsLoading(false);
-  // }
 
   return (
     // <ThemeProvider theme={theme}>
@@ -114,12 +90,12 @@ export const HomePage = () => {
             sx={{ height: "70px", textAlign: "center", pt: "20px"}}
             color={colors.grey[100]}
           >
-            Emotion-based Music Provider
+            YouTube Emotion Detection
           </Typography>
         {/* </Grid> */}
         {/* <Grid item xs={1}> */}
           {/* <Box sx={{ borderBottom: 1, borderColor: 'divider' }}> */}
-            <TabList
+            {/* <TabList
               onChange={handleChange}
               TabIndicatorProps={{ color: colors.primary[100] }}
               aria-label="music recommendation or music generation"
@@ -128,7 +104,7 @@ export const HomePage = () => {
             >
               <Tab 
                 sx={{ 
-                  height: "10px",
+                  height: "2px",
                   py: "0px",
                   // color: 
                   '.Mui-selected' : {
@@ -140,15 +116,15 @@ export const HomePage = () => {
                 }}
                 textColor={colors.primary[200]}
                 indicatorColor={colors.primary[200]}
-                label="Music Recommendation"
+                label=""
                 value="1"
               />
-              <Tab sx={{ height: "10px", py: "0px"}} label="Music Generation" value="2" />
-            </TabList>
+              <Tab sx={{ height: "2px", py: "0px"}} label="" value="2" />
+            </TabList> */}
           {/* </Box> */}
         {/* </Grid> */}
         {/* <Grid item xs={10} sx={{ height: "80%"}} > */}
-          <Container id="tabs" maxWidth="1600px" sx={{height: "calc(100% - 150px)", width: "100%" }}>
+          <Container id="tabs" maxWidth="1600px" sx={{height: "calc(100% - 110px)", width: "100%" }}>
             <TabPanel value="1" sx={{height: "100%", pt: 0}}>
               <HomeMusicRecommendation
                   setIsLoading={setIsLoading}
