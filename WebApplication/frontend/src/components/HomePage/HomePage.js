@@ -48,6 +48,9 @@ export const HomePage = () => {
   const openInfo = () => {
     if (predictionLoaded === true) {
       setExpandedInfo(true);
+      setTimeout(() => {
+        infoRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, "300");
     }
   }
   

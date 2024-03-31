@@ -136,6 +136,7 @@ export const HomeMusicRecommendation = ({
   }
 
   const predictEmotion = () => {
+    setIsLoading(true);
     if (youTubeLinkPlaceholder === "https://www.youtube.com/watch?v=IFj4v7niPRI") {
       setMode("1");
     }
@@ -144,7 +145,11 @@ export const HomeMusicRecommendation = ({
     }
     const videoID = youTubeLinkPlaceholder.split("v=")[1];
     setYouTubeID(videoID);
-    setPredictionLoaded(true);
+
+    setTimeout(() => {
+      setPredictionLoaded(true);
+      setIsLoading(false);
+    }, 1000);
   }
 
   return (
