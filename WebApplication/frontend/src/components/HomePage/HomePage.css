@@ -152,6 +152,22 @@
   justify-content: space-around;
 }
 
+/* #more-info:hover {
+  font-weight: 600;
+} */
+
+
+.captured-image {
+  width: 100%;
+  height: 100%;
+  object-fit:contain;
+}
+
+
+audio {
+  width: 100%;
+  margin-top: 2px;
+}
 
 
 

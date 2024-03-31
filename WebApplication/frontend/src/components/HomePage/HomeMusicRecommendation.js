@@ -23,12 +23,15 @@ export const HomeMusicRecommendation = ({
     setRecommendMode,
     setAudioScatterData,
     infoRef,
-    setLoadTime
+    setLoadTime,
+    predictionLoaded,
+    setPredictionLoaded,
+    mode,
+    setMode
   }) => {
 
   const [youTubeLinkPlaceholder, setYouTubeLinkPlaceholder] = useState("");
   const [youTubeID, setYouTubeID] = useState("");
-  const [predictionLoaded, setPredictionLoaded] = useState(false);
 
   // const [recordedAudio, setRecordedAudio] = useState(null);
   // const [withText, setWithText] = useState(true);
@@ -45,7 +48,7 @@ export const HomeMusicRecommendation = ({
 
   
 
-  // const moreInfo = (selectedMusic) => {
+  const moreInfo = (selectedMusic) => {
   //   setMusicInfoToDisplay(selectedMusic);
     
   //   const selectedMusicPoints = [{
@@ -85,11 +88,11 @@ export const HomeMusicRecommendation = ({
   //   ]);
 
 
-  //   setExpandedInfo(true);
-  //   setTimeout(() => {
-  //     infoRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  //   }, "300");
-  // }
+    setExpandedInfo(true);
+    setTimeout(() => {
+      infoRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, "300");
+  }
 
 
   // useEffect(() => {
@@ -133,6 +136,12 @@ export const HomeMusicRecommendation = ({
   }
 
   const predictEmotion = () => {
+    if (youTubeLinkPlaceholder === "https://www.youtube.com/watch?v=IFj4v7niPRI") {
+      setMode("1");
+    }
+    else if (youTubeLinkPlaceholder === "https://www.youtube.com/watch?v=odzKEGe_iuk") {
+      setMode("2");
+    }
     const videoID = youTubeLinkPlaceholder.split("v=")[1];
     setYouTubeID(videoID);
     setPredictionLoaded(true);
@@ -166,9 +175,11 @@ export const HomeMusicRecommendation = ({
           <Typography variant="h3" color={colors.grey[100]} align="center" >
             Overall emotion
           </Typography>
-
-
-          <BarChart />
+          {
+            (predictionLoaded)
+            ? <BarChart mode={mode} />
+            : ""
+          }
         </Paper>
       </Grid>
       <Grid item xs={12} sm={8} xl={9} sx={{ height: "100%"}} >
@@ -179,13 +190,13 @@ export const HomeMusicRecommendation = ({
                   <Grid item xs={12} sx={{height: "400px", width: "900px", m: 0}}>
                     <iframe width="900" height="400"
                       src={`https://www.youtube.com/embed/${youTubeID}`}>
-                    </iframe>
+                    </iframe>-=
                   </Grid>
                   <Grid item xs={12} sx={{height: "160px", width: "900px", m: 0}}>
-                    <LineChart />
+                    <LineChart mode={mode} />
                   </Grid>
                   <Grid item xs={12} sx={{height: "180px", width: "900px", m: 0}}>
-                    <BumpChart />
+                    <BumpChart mode={mode} />
                   </Grid>
                 </Grid>
               : ""

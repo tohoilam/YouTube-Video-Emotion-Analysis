@@ -5,7 +5,7 @@ import { ResponsiveLine } from '@nivo/line'
 import Header from '../Header';
 import ChartsTheme from './ChartsTheme';
 
-const data = [
+const data1 = [
   {
     "id": "Emotion Amplitude",
     "color": "hsl(111, 70%, 50%)",
@@ -51,33 +51,55 @@ const data = [
         "y": 41
       },
     ]
-  },
-  // {
-  //   "id": "norway",
-  //   "color": "hsl(107, 70%, 50%)",
-  //   "data": [
-  //     {
-  //       "x": "section 1",
-  //       "y": 8
-  //     },
-  //     {
-  //       "x": "section 2",
-  //       "y": 8
-  //     },
-  //     {
-  //       "x": "section 3",
-  //       "y": 155
-  //     },
-  //     {
-  //       "x": "section 4",
-  //       "y": 198
-  //     },
-  //     {
-  //       "x": "section 5",
-  //       "y": 283
-  //     },
-  //   ]
-  // }
+  }
+];
+const data2 = [
+  {
+    "id": "Emotion Amplitude",
+    "color": "hsl(111, 70%, 50%)",
+    "data": [
+      {
+        "x": "1",
+        "y": 20
+      },
+      {
+        "x": "2",
+        "y": 50
+      },
+      {
+        "x": "3",
+        "y": 80
+      },
+      {
+        "x": "4",
+        "y": 50
+      },
+      {
+        "x": "5",
+        "y": 20
+      },
+      {
+        "x": "6",
+        "y": 50
+      },
+      {
+        "x": "7",
+        "y": 80
+      },
+      {
+        "x": "8",
+        "y": 50
+      },
+      {
+        "x": "9",
+        "y": 50
+      },
+      {
+        "x": "10",
+        "y": 50
+      },
+    ]
+  }
 ];
 
 // make sure parent container have a defined height when using
@@ -85,7 +107,7 @@ const data = [
 // no chart will be rendered.
 // website examples showcase many properties,
 // you'll often use just a few of them.
-const LineChart = () => {
+const LineChart = ({mode}) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
@@ -93,7 +115,7 @@ const LineChart = () => {
 
   return (
     <ResponsiveLine
-        data={data}
+        data={(mode === "1") ? data1 : data2}
         theme={chartsTheme}
         margin={{ top: 15, right: 10, bottom: 10, left: 10 }}
         xScale={{ type: 'point' }}

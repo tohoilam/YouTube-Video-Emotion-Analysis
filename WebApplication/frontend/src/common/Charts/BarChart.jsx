@@ -2,28 +2,9 @@ import { useTheme } from '@mui/material';
 import { tokens } from '../../theme';
 import { ResponsiveBar } from '@nivo/bar';
 import ChartsTheme from './ChartsTheme';
+import { useEffect } from 'react';
 
-const data = [
-    {
-      "Modality": "Text",
-      "Anger": 14,
-      "Fear": 14,
-      "Disgust": 14,
-      "Sadness": 14,
-      "Neutral": 14,
-      "Happiness": 14,
-      "Surprise": 14,
-    },
-    {
-      "Modality": "Audio",
-      "Anger": 14,
-      "Fear": 14,
-      "Disgust": 14,
-      "Sadness": 14,
-      "Neutral": 14,
-      "Happiness": 14,
-      "Surprise": 14,
-    },
+const data1 = [
     {
       "Modality": "Image",
       "Anger": 14,
@@ -32,11 +13,64 @@ const data = [
       "Sadness": 14,
       "Neutral": 14,
       "Happiness": 14,
-      "Surprise": 14,
-    }
+      "Surprise": 16,
+    },
+    {
+        "Modality": "Audio",
+        "Anger": 14,
+        "Fear": 14,
+        "Disgust": 14,
+        "Sadness": 14,
+        "Neutral": 14,
+        "Happiness": 14,
+        "Surprise": 16,
+    },
+    {
+      "Modality": "Text",
+      "Anger": 14,
+      "Fear": 14,
+      "Disgust": 14,
+      "Sadness": 14,
+      "Neutral": 14,
+      "Happiness": 14,
+      "Surprise": 16,
+    },
 ]
 
-const BarChart = () => {
+const data2 = [
+    {
+      "Modality": "Image",
+      "Anger": 0,
+      "Fear": 0,
+      "Disgust": 0,
+      "Sadness": 0,
+      "Neutral": 0,
+      "Happiness": 50,
+      "Surprise": 50,
+    },
+    {
+        "Modality": "Audio",
+        "Anger": 14,
+        "Fear": 14,
+        "Disgust": 14,
+        "Sadness": 14,
+        "Neutral": 14,
+        "Happiness": 14,
+        "Surprise": 16,
+    },
+    {
+      "Modality": "Text",
+      "Anger": 50,
+      "Fear": 50,
+      "Disgust": 0,
+      "Sadness": 0,
+      "Neutral": 0,
+      "Happiness": 0,
+      "Surprise": 0,
+    },
+]
+
+const BarChart = ({mode}) => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
 
@@ -44,7 +78,7 @@ const BarChart = () => {
 
     return (
         <ResponsiveBar
-            data={data}
+            data={(mode === "1") ? data1 : data2}
             colors={chartsEmotionColors}
             theme={chartsTheme}
             keys={[
@@ -163,6 +197,7 @@ const BarChart = () => {
             ariaLabel="Nivo bar chart demo"
             barAriaLabel={e=>e.id+": "+e.formattedValue+" in country: "+e.indexValue}
         />
+
     )
     // }
 }

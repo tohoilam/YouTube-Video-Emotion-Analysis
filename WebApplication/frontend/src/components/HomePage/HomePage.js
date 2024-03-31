@@ -4,7 +4,9 @@ import { RecordButton } from '../../common/RecordButton/RecordButton'
 import { HomeMusicRecommendation } from './HomeMusicRecommendation'
 import { HomeMusicGeneration } from './HomeMusicGeneration'
 import { MusicRecommendationInfo } from '../Info/MusicRecommendationInfo'
+import { EmotionInfo } from '../Info/EmotionInfo'
 import DonutChart from '../../common/Charts/DonutChart'
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 
 import MGApi from '../../routes/MGApi'
@@ -13,7 +15,7 @@ import { tokens } from '../../theme'
 
 
 import './HomePage.css'
-import { ThemeProvider, Container, Typography, Paper, Box, Tab, Button, Grid, Accordion, AccordionSummary, AccordionDetails, CircularProgress } from '@mui/material'
+import { ThemeProvider, Container, Typography, Paper, Box, Tab, Button, Grid, Accordion, AccordionSummary, AccordionDetails, CircularProgress, TextField } from '@mui/material'
 import { useTheme } from '@mui/material';
 
 import { TabContext, TabList, TabPanel } from '@mui/lab'
@@ -31,6 +33,8 @@ export const HomePage = () => {
   const [generateMode, setGenerateMode] = useState('monophonic');
   const [tab, setTab] = React.useState('1');
   const [loadTime, setLoadTime] = React.useState('15');
+  const [predictionLoaded, setPredictionLoaded] = useState(false);
+  const [mode, setMode] = useState("1");
 
   const infoRef = useRef(null);
 
@@ -39,6 +43,12 @@ export const HomePage = () => {
 
   const closeInfo = () => {
     setExpandedInfo(false);
+  }
+
+  const openInfo = () => {
+    if (predictionLoaded === true) {
+      setExpandedInfo(true);
+    }
   }
   
 
@@ -137,6 +147,10 @@ export const HomePage = () => {
                   setAudioScatterData={setAudioScatterData}
                   infoRef={infoRef}
                   setLoadTime={setLoadTime}
+                  predictionLoaded={predictionLoaded}
+                  setPredictionLoaded={setPredictionLoaded}
+                  mode={mode}
+                  setMode={setMode}
               ></HomeMusicRecommendation>
               <Paper 
                 sx={{
@@ -155,19 +169,12 @@ export const HomePage = () => {
                     aria-controls="panel1a-content"
                     id="panel1a-header"
                   >
-                    <Typography sx={{ textAlign: "center", width: "100%", pt: "7px", pb: "3px", fontSize: "0.9rem"}}>MORE INFO</Typography>
+                    <Typography id="more-info" onClick={openInfo} sx={{ textAlign: "center", width: "100%", pt: "7px", pb: "3px", fontSize: "0.9rem"}}>MORE INFO</Typography>
                   </AccordionSummary>
                   <AccordionDetails>
                     {/* <Typography> */}
                       {
-                        (musicInfoToDisplay)
-                        ? <MusicRecommendationInfo
-                              speechInfo={speechInfo}
-                              musicInfoToDisplay={musicInfoToDisplay}
-                              recommendMode={recommendMode}
-                              audioScatterData={audioScatterData}
-                          />
-                        : ""
+                        <EmotionInfo mode={mode} />
                       }
                       <Button
                         variant="text"
@@ -208,7 +215,7 @@ export const HomePage = () => {
                   <Accordion expanded={expandedInfo} square sx={{height: "100%", bgcolor: "rgba(0,0,0,0)", backgroundImage: "none", cursor: "default"}}>
                     <AccordionSummary
                       sx={{borderRadius: "100px", bgcolor: "rgba(0,0,0,0)", cursor: "default"}}
-                      // expandIcon={<ExpandMoreIcon />}
+                      expandIcon={<ExpandMoreIcon />}
                       aria-controls="panel1a-content"
                       id="panel1a-header"
                     >
@@ -217,17 +224,7 @@ export const HomePage = () => {
                     <AccordionDetails>
                       {/* <Typography> */}
                         {
-                          (tab === "1")
-                          ? <MusicRecommendationInfo
-                                speechInfo={speechInfo}
-                                musicInfoToDisplay={musicInfoToDisplay}
-                                recommendMode={recommendMode}
-                                audioScatterData={audioScatterData}
-                            />
-                          : <MusicGenerationInfo
-                                speechInfo={speechInfo}
-                                generatedMusicInfoToDisplay={generatedMusicInfoToDisplay}
-                            />
+                          <TextField fullWidth id="outlined-basic" label="YouTube Link" variant="outlined" />
                         }
                         <Button
                           variant="text"

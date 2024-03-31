@@ -159,7 +159,7 @@ const DonutChart = ({data, height, title, subtitle}) => {
           translateX: 0,
           translateY: 30,
           itemsSpacing: 0,
-          itemWidth: 68,
+          itemWidth: 55,
           itemHeight: 18,
           itemTextColor: colors.grey[100],
           itemDirection: 'top-to-bottom',
@@ -193,7 +193,7 @@ const DonutChart = ({data, height, title, subtitle}) => {
       }}
       m="20px"
     >
-      <Header title={title} subtitle={subtitle}></Header>
+      <Header title={title} subtitle={subtitle} titleAlign='center' subtitleAlign='center'></Header>
       <Box height={height}>
         <Donut />
       </Box>
