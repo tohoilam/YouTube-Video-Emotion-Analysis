@@ -22,31 +22,31 @@ export const EmotionInfo = ({mode}) => {
       "data": [
         {
           "x": "Anger",
-          "y": 10
+          "y": 2.33
         },
         {
           "x": "Fear",
-          "y": 10
+          "y": 9.34
         },
         {
           "x": "Disgust",
-          "y": 10
+          "y": 5.67
         },
         {
           "x": "Sadness",
-          "y": 10
+          "y": 13.37
         },
         {
           "x": "Neutral",
-          "y": 20
+          "y": 9.78
         },
         {
           "x": "Happiness",
-          "y": 20
+          "y": 20.63
         },
         {
           "x": "Surprise",
-          "y": 20
+          "y": 39.22
         },
       ]
     },
@@ -55,31 +55,31 @@ export const EmotionInfo = ({mode}) => {
       "data": [
         {
           "x": "Anger",
-          "y": 10
+          "y": 4.09
         },
         {
           "x": "Fear",
-          "y": 10
+          "y": 3.32
         },
         {
           "x": "Disgust",
-          "y": 10
+          "y": 40.87
         },
         {
           "x": "Sadness",
-          "y": 10
+          "y": 14.37
         },
         {
           "x": "Neutral",
-          "y": 20
+          "y": 29.86
         },
         {
           "x": "Happiness",
-          "y": 20
+          "y": 4.27
         },
         {
           "x": "Surprise",
-          "y": 20
+          "y": 3.22
         },
       ]
     },
@@ -88,31 +88,31 @@ export const EmotionInfo = ({mode}) => {
       "data": [
         {
           "x": "Anger",
-          "y": 10
+          "y": 1.07
         },
         {
           "x": "Fear",
-          "y": 10
+          "y": 0.36
         },
         {
           "x": "Disgust",
-          "y": 10
+          "y": 0.89
         },
         {
           "x": "Sadness",
-          "y": 10
+          "y": 0.34
         },
         {
           "x": "Neutral",
-          "y": 20
+          "y": 2.39
         },
         {
           "x": "Happiness",
-          "y": 20
+          "y": 46.62
         },
         {
           "x": "Surprise",
-          "y": 20
+          "y": 48.33
         },
       ]
     }
@@ -423,7 +423,6 @@ export const EmotionInfo = ({mode}) => {
       ]
     }
   ]
-
 
 	const textEmotionDonutData1 = [
 		{
