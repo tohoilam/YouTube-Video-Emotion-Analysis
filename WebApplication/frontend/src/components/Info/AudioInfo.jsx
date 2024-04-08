@@ -15,7 +15,7 @@ import { continuousColorsLegendDefaults } from '@nivo/legends';
 
 import MRApi from '../../routes/MRApi';
 
-export const MusicRecommendationInfo = ({speechInfo, musicInfoToDisplay, recommendMode, audioScatterData}) => {
+export const AudioInfo = ({speechInfo, musicInfoToDisplay, recommendMode, audioScatterData}) => {
 
   
   const theme = useTheme();

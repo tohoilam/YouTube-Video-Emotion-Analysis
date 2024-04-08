@@ -4,18 +4,8 @@ import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import DonutChart from '../../common/Charts/DonutChart'
-import LineChart from '../../common/Charts/LineChart'
-import RadarChart from '../../common/Charts/RadarChart'
-import ScatterChart from '../../common/Charts/ScatterChart'
-import ParallelChart from '../../common/Charts/ParallelChart';
-import HeatmapChart from '../../common/Charts/HeatmapChart';
 
-import Header from '../../common/Header';
-import { continuousColorsLegendDefaults } from '@nivo/legends';
-
-import MRApi from '../../routes/MRApi';
-
-export const MusicGenerationInfo = ({speechInfo, generatedMusicInfoToDisplay}) => {
+export const ImageInfo = ({speechInfo, generatedMusicInfoToDisplay}) => {
 
   
   const theme = useTheme();

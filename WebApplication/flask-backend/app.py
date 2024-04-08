@@ -2,22 +2,22 @@ import os
 import shutil
 import json
 import numpy as np
+import tensorflow as tf
+# from pomegranate import *
 from flask import Flask, request, render_template
 from flask_cors import CORS, cross_origin
 
 
-# from components.speech_emotion_recognition.SERDataProcessing import SERDataProcessing
-# from HMMDataProcessing import HMMDataProcessing
 
-# from blueprints.music_generation_blueprint import music_generation_blueprint
+from blueprints.image_blueprint import image_blueprint
 from blueprints.speech_emotion_recognition_blueprint import speech_emotion_recognition_blueprint
-# from blueprints.music_recommendation_blueprint import music_recommendation_blueprint
+from blueprints.text_blueprint import text_blueprint
 
 app = Flask(__name__, static_folder="static")
 
-# app.register_blueprint(music_generation_blueprint)
+app.register_blueprint(image_blueprint)
 app.register_blueprint(speech_emotion_recognition_blueprint)
-# app.register_blueprint(music_recommendation_blueprint)
+app.register_blueprint(text_blueprint)
 
 
 @app.errorhandler(413)

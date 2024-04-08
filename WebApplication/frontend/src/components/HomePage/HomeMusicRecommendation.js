@@ -1,12 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react'
 
 import { Grid, Typography, Paper, Box, Button, useTheme, FormControl, InputLabel, Select, MenuItem, TextField } from '@mui/material';
-import FileUploadOutlinedIcon from '@mui/icons-material/FileUploadOutlined';
-import SentimentVerySatisfiedIcon from '@mui/icons-material/SentimentVerySatisfied';
 import FaceRetouchingNaturalIcon from '@mui/icons-material/FaceRetouchingNatural';
 
-import { RecordButton } from '../../common/RecordButton/RecordButton'
-import MRApi from '../../routes/MRApi'
 import { tokens } from '../../theme';
 
 import BarChart from '../../common/Charts/BarChart'
@@ -32,104 +28,18 @@ export const HomeMusicRecommendation = ({
 
   const [youTubeLinkPlaceholder, setYouTubeLinkPlaceholder] = useState("");
   const [youTubeID, setYouTubeID] = useState("");
-
-  // const [recordedAudio, setRecordedAudio] = useState(null);
-  // const [withText, setWithText] = useState(true);
-  // const [recommendedMusic, setRecommendedMusic] = useState([]);
-  // const [genre, setGenre] = useState("pop");
-  // const [numOfSongs, setNumOfSongs] = useState(20);
-  // const [selectedMode, setSelectedMode] = useState('audio');
-
-  // const [dropActive, setDropActive] = useState([]);
-	// const audioFileInputRef= useRef(null);
-
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
   
 
   const moreInfo = (selectedMusic) => {
-  //   setMusicInfoToDisplay(selectedMusic);
-    
-  //   const selectedMusicPoints = [{
-  //     "x": selectedMusic["audio"]["valence"],
-  //     "y": selectedMusic["audio"]["arousal"]
-  //   }]
-
-  //   const nonSelectedMusicPoints = recommendedMusic
-  //                                   .filter(music => music['spotify_id'] !== selectedMusic['spotify_id'] )
-  //                                   .map(music => {
-  //                                     return ({
-  //                                       "x": music["audio"]["valence"],
-  //                                       "y": music["audio"]["arousal"]
-  //                                     })
-  //                                   })
-
-  //   const va = emotionPercentagesToVA(speechInfo["audio"]["percentage"]);
-
-  //   const speechPoints = [{
-  //     "x": va["valence"],
-  //     "y": va["arousal"]
-  //   }];
-
-  //   setAudioScatterData([
-  //     {
-  //       "id": "Other Songs",
-  //       "data": nonSelectedMusicPoints
-  //     },
-  //     {
-  //       "id": "Speech",
-  //       "data": speechPoints
-  //     },
-  //     {
-  //       "id": "Selected Song",
-  //       "data": selectedMusicPoints
-  //     }
-  //   ]);
-
-
     setExpandedInfo(true);
     setTimeout(() => {
       infoRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }, "300");
   }
 
-
-  // useEffect(() => {
-  //   console.log(recordedAudio);
-  // }, [recordedAudio])
-
-
-  // const EmotionItem = () => {
-  //   let emotionText = "";
-  //   let percentage = 0;
-
-  //   if (recommendMode === 'audio') {
-  //     if (speechInfo && 'audio' in speechInfo) {
-  //       emotionText = speechInfo['audio']['emotion'];
-  //       percentage = speechInfo['audio']['percentage'][emotionText];
-  //     }
-  //   }
-  //   else {
-  //     if (speechInfo && 'combined' in speechInfo) {
-  //       emotionText = speechInfo['combined']['emotion'];
-  //       percentage = speechInfo['combined']['percentage'][emotionText];
-  //     }
-  //   }
-
-  //   if (emotionText && percentage) {
-  //     const text = emotionText + " (" + toPercentageFormat(percentage).toString() + "%)"
-
-  //     return (
-  //       <Paper variant="outlined" sx={{ bgcolor: colors.emotion[emotionText], borderRadius: "20px", height: "100%" }}>
-  //         <Typography variant="h3" align="center" sx={{pt: "5px"}}>{text}</Typography>
-  //       </Paper>
-  //     )
-  //   }
-  //   else {
-  //     return "";
-  //   }
-  // }
 
   const setYouTube = (e) => {
     setYouTubeLinkPlaceholder(e.target.value);

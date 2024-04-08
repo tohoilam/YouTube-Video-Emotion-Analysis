@@ -8,7 +8,7 @@ import { RecordButton } from '../../common/RecordButton/RecordButton'
 import MGApi from '../../routes/MGApi'
 import { tokens } from '../../theme';
 
-export const HomeMusicGeneration = ({
+export const EmotionRecognition = ({
     setIsLoading,
     setExpandedInfo,
     setGeneratedMusicInfoToDisplay,
