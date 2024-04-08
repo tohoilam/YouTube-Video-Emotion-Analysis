@@ -124,31 +124,31 @@ export const EmotionInfo = ({mode}) => {
       "data": [
         {
           "x": "Anger",
-          "y": 5
+          "y": 29.89
         },
         {
           "x": "Fear",
-          "y": 5
+          "y": 27.34
         },
         {
           "x": "Disgust",
-          "y": 5
+          "y": 7.67
         },
         {
           "x": "Sadness",
-          "y": 5
+          "y": 7.44
         },
         {
           "x": "Neutral",
-          "y": 5
+          "y": 1.82
         },
         {
           "x": "Happiness",
-          "y": 5
+          "y": 4.23
         },
         {
           "x": "Surprise",
-          "y": 70
+          "y": 21.61
         },
       ]
     },
@@ -157,31 +157,31 @@ export const EmotionInfo = ({mode}) => {
       "data": [
         {
           "x": "Anger",
-          "y": 5
+          "y": 11.07
         },
         {
           "x": "Fear",
-          "y": 5
+          "y": 19.32
         },
         {
           "x": "Disgust",
-          "y": 5
+          "y": 8.61
         },
         {
           "x": "Sadness",
-          "y": 5
+          "y": 15.37
         },
         {
           "x": "Neutral",
-          "y": 5
+          "y": 13.88
         },
         {
           "x": "Happiness",
-          "y": 5
+          "y": 2.27
         },
         {
           "x": "Surprise",
-          "y": 70
+          "y": 29.48
         },
       ]
     },
@@ -190,31 +190,31 @@ export const EmotionInfo = ({mode}) => {
       "data": [
         {
           "x": "Anger",
-          "y": 5
+          "y": 33.81
         },
         {
           "x": "Fear",
-          "y": 5
+          "y": 16.46
         },
         {
           "x": "Disgust",
-          "y": 5
+          "y": 19.67
         },
         {
           "x": "Sadness",
-          "y": 5
+          "y": 16.38
         },
         {
           "x": "Neutral",
-          "y": 5
+          "y": 9.89
         },
         {
           "x": "Happiness",
-          "y": 5
+          "y": 2.62
         },
         {
           "x": "Surprise",
-          "y": 70
+          "y": 1.17
         },
       ]
     }
@@ -226,31 +226,31 @@ export const EmotionInfo = ({mode}) => {
       "data": [
         {
           "x": "Anger",
-          "y": 10
+          "y": 9.31
         },
         {
           "x": "Fear",
-          "y": 10
+          "y": 0
         },
         {
           "x": "Disgust",
-          "y": 10
+          "y": 0
         },
         {
           "x": "Sadness",
-          "y": 10
+          "y": 0
         },
         {
           "x": "Neutral",
-          "y": 20
+          "y": 0
         },
         {
           "x": "Happiness",
-          "y": 20
+          "y": 12.41
         },
         {
           "x": "Surprise",
-          "y": 20
+          "y": 78.28
         },
       ]
     },
@@ -259,31 +259,31 @@ export const EmotionInfo = ({mode}) => {
       "data": [
         {
           "x": "Anger",
-          "y": 10
+          "y": 0.00
         },
         {
           "x": "Fear",
-          "y": 10
+          "y": 17.55
         },
         {
           "x": "Disgust",
-          "y": 10
+          "y": 0.00
         },
         {
           "x": "Sadness",
-          "y": 10
+          "y": 82.34
         },
         {
           "x": "Neutral",
-          "y": 20
+          "y": 0.01
         },
         {
           "x": "Happiness",
-          "y": 20
+          "y": 0.00
         },
         {
           "x": "Surprise",
-          "y": 20
+          "y": 0.00
         },
       ]
     },
@@ -292,31 +292,31 @@ export const EmotionInfo = ({mode}) => {
       "data": [
         {
           "x": "Anger",
-          "y": 10
+          "y": 0.01
         },
         {
           "x": "Fear",
-          "y": 10
+          "y": 4.60
         },
         {
           "x": "Disgust",
-          "y": 10
+          "y": 0.01
         },
         {
           "x": "Sadness",
-          "y": 10
+          "y": 0.02
         },
         {
           "x": "Neutral",
-          "y": 20
+          "y": 44.42
         },
         {
           "x": "Happiness",
-          "y": 20
+          "y": 50.93
         },
         {
           "x": "Surprise",
-          "y": 20
+          "y": 0.01
         },
       ]
     }
@@ -328,31 +328,31 @@ export const EmotionInfo = ({mode}) => {
       "data": [
         {
           "x": "Anger",
-          "y": 5
+          "y": 53.26
         },
         {
           "x": "Fear",
-          "y": 5
+          "y": 1.39
         },
         {
           "x": "Disgust",
-          "y": 5
+          "y": 0.01
         },
         {
           "x": "Sadness",
-          "y": 5
+          "y": 0.00
         },
         {
           "x": "Neutral",
-          "y": 5
+          "y": 45.22
         },
         {
           "x": "Happiness",
-          "y": 5
+          "y": 0.00
         },
         {
           "x": "Surprise",
-          "y": 70
+          "y": 0.12
         },
       ]
     },
@@ -361,31 +361,31 @@ export const EmotionInfo = ({mode}) => {
       "data": [
         {
           "x": "Anger",
-          "y": 5
+          "y": 31.94
         },
         {
           "x": "Fear",
-          "y": 5
+          "y": 2.57
         },
         {
           "x": "Disgust",
-          "y": 5
+          "y": 6.05
         },
         {
           "x": "Sadness",
-          "y": 5
+          "y": 14.25
         },
         {
           "x": "Neutral",
-          "y": 5
+          "y": 42.66
         },
         {
           "x": "Happiness",
-          "y": 5
+          "y": 1.30
         },
         {
           "x": "Surprise",
-          "y": 70
+          "y": 1.23
         },
       ]
     },
@@ -428,43 +428,43 @@ export const EmotionInfo = ({mode}) => {
 		{
 			"id": "Anger",
 			"label": "Anger",
-			"value": 0.2,
+			"value": 10.29,
 			"color": colors.emotion['Anger']
 		},
 		{
 			"id": "Fear",
 			"label": "Fear",
-			"value": 0.2,
+			"value": 11.37,
 			"color": colors.emotion['Fear']
 		},
 		{
 			"id": "Disgust",
 			"label": "Disgust",
-			"value": 0.2,
+			"value": 8.61,
 			"color": colors.emotion['Disgust']
 		},
 		{
 			"id": "Sadness",
 			"label": "Sadness",
-			"value": 0.1,
+			"value": 15.34,
 			"color": colors.emotion['Sadness']
 		},
 		{
 			"id": "Neutral",
 			"label": "Neutral",
-			"value": 0.1,
+			"value": 29.03,
 			"color": colors.emotion['Neutral']
 		},
 		{
 			"id": "Happiness",
 			"label": "Happiness",
-			"value": 0.1,
+			"value": 17.14,
 			"color": colors.emotion['Happiness']
 		},
 		{
 			"id": "Surprise",
 			"label": "Surprise",
-			"value": 0.1,
+			"value": 8.22,
 			"color": colors.emotion['Surprise']
 		},
 	];
@@ -473,49 +473,49 @@ export const EmotionInfo = ({mode}) => {
 		{
 			"id": "Anger",
 			"label": "Anger",
-			"value": 0.05,
+			"value": 13.28,
 			"color": colors.emotion['Anger']
 		},
 		{
 			"id": "Fear",
 			"label": "Fear",
-			"value": 0.05,
+			"value": 4.92,
 			"color": colors.emotion['Fear']
 		},
 		{
 			"id": "Disgust",
 			"label": "Disgust",
-			"value": 0.05,
+			"value": 1.49,
 			"color": colors.emotion['Disgust']
 		},
 		{
 			"id": "Sadness",
 			"label": "Sadness",
-			"value": 0.05,
+			"value": 2.70,
 			"color": colors.emotion['Sadness']
 		},
 		{
 			"id": "Neutral",
 			"label": "Neutral",
-			"value": 0.05,
+			"value": 74.94,
 			"color": colors.emotion['Neutral']
 		},
 		{
 			"id": "Happiness",
 			"label": "Happiness",
-			"value": 0.05,
+			"value": 1.82,
 			"color": colors.emotion['Happiness']
 		},
 		{
 			"id": "Surprise",
 			"label": "Surprise",
-			"value": 0.7,
+			"value": 0.85,
 			"color": colors.emotion['Surprise']
 		},
 	];
 
-	const textTranscript1 = "text transcript 1 fdshjfisdhfjosdhfjsdfnjknsdfjknsdjfnjksdnfjksdnjknsdjkfnsjkfndsjnfjkndsjfkndjnfjksndjfnsdkf dsnf jnsdjkfnsdjkf njksdnfjksd ";
-	const textTranscript2 = "text transcript 2 fdshjfisdhfjosdhfjsdfnjknsdfjknsdjfnjksdnfjksdnjknsdjkfnsjkfndsjnfjkndsjfkndjnfjksndjfnsdkf dsnf jnsdjkfnsdjkf njksdnfjksd ";
+	const textTranscript1 = "Hello hello my name is Anya and welcome to my calls decisions reactions video so all about me I am 17 years old I'm a senior in high school from Berkeley California which is right outside of San Francisco I applied to 19 schools my safety schools were University of Washington Seattle University of Wisconsin-Madison UC Davis UC Santa Cruz and Drexel my target schools were Oberlin Boston University Miguel and UC San Diego and then my reach schools were Columbia Georgetown UCLA Brown upon Yale Washington and Harvard of those schools I visited Columbia Gorge Town UCLA brown stand for San Diego University of Washington and UC Santa Cruz so I visited the majority of the schools that I applied to but I didn't personally for any of them because it was covid of those schools I interviewed for Georgetown Columbia Yale Harvard University's or any of that in this video but if you would like to see a video with my stats extracurriculars or my essays or like any tips about high school application process let me know in the comments and maybe I'll make one I can promise you this will not be one of those boring videos like I'm an emotional person so I can promise that there will be some interesting reactions and that serves as a warning to my headphone users out there you've been working I hope you enjoy this video I enjoyed filming it and making it ready clothing";
+	const textTranscript2 = "Three deposits tonight. And he did like he was told, buffed those shoes to a high mirror shine. The guard simply didn't notice, neither did I. I mean, seriously, how often do you really look at a man's shoes? Thank you. I don't know what to do with this. I don't know what to do with this. And he crawled to freedom through 500 yards of shit -smelling foulness I can't even imagine. Or maybe I just don't want to. 500 yards. That's the length of 500 yards. football fields, just shy of half a mile. The next morning, right about the time Raquel was spilling her little secret, a man nobody ever laid eyes on before strolled into the Maine National Bank. Until that moment, he didn't exist, except on paper. May I help you? He had all the proper ID, driver's license, birth certificate, social security card, and the signature was a spot -on match. I must say, I'm sorry to be losing your business. I hope you'll enjoy living abroad. Thank you. I'm sure I will. ";
 
 	return (
 		<Grid

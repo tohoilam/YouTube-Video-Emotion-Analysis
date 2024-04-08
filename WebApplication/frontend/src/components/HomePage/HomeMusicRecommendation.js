@@ -140,7 +140,7 @@ export const HomeMusicRecommendation = ({
     if (youTubeLinkPlaceholder === "https://www.youtube.com/watch?v=IFj4v7niPRI") {
       setMode("1");
     }
-    else if (youTubeLinkPlaceholder === "https://www.youtube.com/watch?v=odzKEGe_iuk") {
+    else if (youTubeLinkPlaceholder === "https://www.youtube.com/watch?v=YvPerZLPnm4") {
       setMode("2");
     }
     const videoID = youTubeLinkPlaceholder.split("v=")[1];
@@ -149,7 +149,7 @@ export const HomeMusicRecommendation = ({
     setTimeout(() => {
       setPredictionLoaded(true);
       setIsLoading(false);
-    }, 1000);
+    }, 3000);
   }
 
   return (
