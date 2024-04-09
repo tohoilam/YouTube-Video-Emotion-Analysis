@@ -40,6 +40,8 @@ Selected YouTube videos across various genres were analyzed using:
 ## Results and Evaluation
 Findings reveal distinct emotion patterns across genres, with audio and visual cues being more effective than text in conveying emotions. The intensity of emotions plays a crucial role in resonating with viewers, highlighting the importance of vocal tone and facial expressions in emotional communication.
 
+![Graphs](https://github.com/tohoilam/YouTube-Video-Emotion-Analysis/assets/61353084/888a4ccd-4ec5-4d51-9685-91ad4dd76cb8)
+
 ## Data Product
 A web application facilitates emotion detection across three modalities and visualizes emotion intensity changes over time. Users can input a YouTube URL to obtain detailed emotion analysis results.
 
