@@ -1,2 +1,43 @@
-# YouTube-Video-Emotion-Analysis
- 
+# YouTube Emotion Detection Project
+
+## Overview
+This project explores the identification of emotions in YouTube videos to analyze viewer engagement and reaction patterns. It encompasses a comprehensive data science pipeline, including model development across text, audio, and image modalities, data extraction using the YouTube API, and a web application for displaying findings. The aim is to provide content creators with insights into optimizing content for enhanced viewer interaction and emotional engagement.
+
+## Motivation
+YouTube's vast landscape offers a unique opportunity for emotion detection, providing valuable insights for content creators, including YouTubers, film, and TV producers. By understanding emotional engagement, creators can design content that fosters a stronger connection with viewers, potentially leading to increased retention and engagement.
+
+## Problem Statement
+The project addresses three primary research questions:
+1. Variation of emotions across different YouTube video genres.
+2. Differences in emotion detection between text, audio, and image modalities.
+3. Correlations between emotions and content features like views, likes, and comments.
+
+## Data Science Pipeline
+The project is divided into two phases:
+1. **Development of emotion detection models** for image, audio, and text.
+2. **Analysis of the impact of emotion** on YouTube video statistics using the developed models.
+
+### Data Preparation and Processing
+Selected YouTube videos across various genres were analyzed using:
+- **Image input:** Frame extraction and organization into folders per video.
+- **Audio input:** Conversion to mp3 format and segmentation for analysis.
+- **Textual input:** Extraction from audio files for emotion detection.
+
+### Models Used
+- **Audio:** A CNN-LSTM model for capturing frequency information and time-series dependencies.
+- **Image:** A DenseNet-121 model focusing on facial expressions for emotion detection.
+- **Text:** A DistilRoBERTa-based model trained on diverse emotional content.
+
+### Data Analysis and Methodology
+- Use of YouTube API v3 for extracting video statistics.
+- Spark for processing large volumes of comments for sentiment analysis.
+- Visualization of correlations between emotions and content features.
+
+## Results and Evaluation
+Findings reveal distinct emotion patterns across genres, with audio and visual cues being more effective than text in conveying emotions. The intensity of emotions plays a crucial role in resonating with viewers, highlighting the importance of vocal tone and facial expressions in emotional communication.
+
+## Data Product
+A web application facilitates emotion detection across three modalities and visualizes emotion intensity changes over time. Users can input a YouTube URL to obtain detailed emotion analysis results.
+
+## Future Work
+Enhancements could include correlating emotional responses with viewership dynamics, provided the YouTube API supports more granular view count data.
