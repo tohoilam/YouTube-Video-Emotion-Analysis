@@ -19,6 +19,8 @@ The project is divided into two phases:
 1. **Development of emotion detection models** for image, audio, and text.
 2. **Analysis of the impact of emotion** on YouTube video statistics using the developed models.
 
+![Flow Chart](https://github.com/tohoilam/YouTube-Video-Emotion-Analysis/assets/61353084/5b5b1a19-8c6e-4ab7-9e06-e71e196d9b3e)
+
 ### Data Preparation and Processing
 Selected YouTube videos across various genres were analyzed using:
 - **Image input:** Frame extraction and organization into folders per video.
