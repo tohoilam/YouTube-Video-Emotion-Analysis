@@ -3,6 +3,8 @@
 ## Overview
 This project explores the identification of emotions in YouTube videos to analyze viewer engagement and reaction patterns. It encompasses a comprehensive data science pipeline, including model development across text, audio, and image modalities, data extraction using the YouTube API, and a web application for displaying findings. The aim is to provide content creators with insights into optimizing content for enhanced viewer interaction and emotional engagement.
 
+![Project Poster Less Clear](https://github.com/tohoilam/YouTube-Video-Emotion-Analysis/assets/61353084/af35dec3-dabf-40e3-b9b7-075ad3a8b3d5)
+
 ## Motivation
 YouTube's vast landscape offers a unique opportunity for emotion detection, providing valuable insights for content creators, including YouTubers, film, and TV producers. By understanding emotional engagement, creators can design content that fosters a stronger connection with viewers, potentially leading to increased retention and engagement.
 
@@ -38,6 +40,12 @@ Findings reveal distinct emotion patterns across genres, with audio and visual c
 
 ## Data Product
 A web application facilitates emotion detection across three modalities and visualizes emotion intensity changes over time. Users can input a YouTube URL to obtain detailed emotion analysis results.
+
+![Web App 1](https://github.com/tohoilam/YouTube-Video-Emotion-Analysis/assets/61353084/e45a3bec-31e0-4091-8e8e-ce7f53d08fc7)
+
+![Web App 2](https://github.com/tohoilam/YouTube-Video-Emotion-Analysis/assets/61353084/8f122886-e663-4534-a301-02b1f7926b44)
+
+![Web App 3](https://github.com/tohoilam/YouTube-Video-Emotion-Analysis/assets/61353084/1a0830d5-c9de-4400-b5e3-ef64e5f87124)
 
 ## Future Work
 Enhancements could include correlating emotional responses with viewership dynamics, provided the YouTube API supports more granular view count data.
